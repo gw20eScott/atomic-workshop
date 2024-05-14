@@ -1,0 +1,46 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Workshop/session1/tasks/task4-build-product-module" />
+
+### Tasks
+These exercises are designed to help get your hands dirty and familair with Atomic Design practises.
+If you're stuck at any point, feel free to ask for assistance or check the 'awnsers' folder for some clues and insight.
+
+No one will be reviewing your work or checking on it's "correctness", that is for you to determine with how you plan to adopt the practises and the product you're building / maintaining.
+
+# Task 3 - Build a Product list module
+The module shows a list of compositions, where we can keep track of which products are in our shopping cart.
+For now the module will also act as our shopping cart, so you must provide the following:
+
+### Build an Product list module
+- Import our Card Composition
+- Show 3 products
+- List the "added / clicked" products in our 'cart'
+
+### Component Template
+You can use this template to help get you started
+
+```
+import styled from 'styled-components'
+
+const ProductModuleWrapper = styled.div``
+
+const ProductModule = () => {
+    return <> </>
+}
+```
+
+### Storybook Template
+
+```
+export default {
+    title: 'Workshop/session1/playground/ProductModule',
+    component: ProductModule,
+    args: {
+        width: '',
+        height: '',
+    },
+};
+
+export const ProductModuleStory = {};
+```

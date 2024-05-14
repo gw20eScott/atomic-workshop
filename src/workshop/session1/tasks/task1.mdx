@@ -1,0 +1,44 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Workshop/session1/tasks/task1-build-element" />
+
+### Tasks
+These exercises are designed to help get your hands dirty and familair with Atomic Design practises.
+If you're stuck at any point, feel free to ask for assistance or check the 'awnsers' folder for some clues and insight.
+
+No one will be reviewing your work or checking on it's "correctness", that is for you to determine with how you plan to adopt the practises and the product you're building / maintaining.
+
+# Task 1 - Build some typography elements
+The product detail page we're creating needs an introduction title and text, likewise the cards also have a heading and description text.
+
+### Build a page title typography element
+- Should accept title as a child and not as a prop
+- Should have size: 3rem;
+- Should support highlighting via child element with a className
+
+### Component Template
+You can use this template to help get you started
+
+```
+    import styled from 'styled-components'
+
+    const PageTitleWrapper = styled.h1``
+
+    const PageTitle = () => {
+        return <> </>
+    }
+```
+
+### Storybook Template
+
+```
+export default {
+    title: 'Workshop/session1/playground/PageTitle',
+    component: PageTitle,
+    args: {
+        title: ``
+    },
+};
+
+export const PageTitleStory = {};
+```

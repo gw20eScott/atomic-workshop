@@ -1,0 +1,49 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Workshop/session1/tasks/task2-build-imagewrapper" />
+
+### Tasks
+These exercises are designed to help get your hands dirty and familair with Atomic Design practises.
+If you're stuck at any point, feel free to ask for assistance or check the 'awnsers' folder for some clues and insight.
+
+No one will be reviewing your work or checking on it's "correctness", that is for you to determine with how you plan to adopt the practises and the product you're building / maintaining.
+
+# Task 2 - Build an image wrapping component
+Either using the service of NextJS, a CDN or other image service, you'll want to have a singular place that makes that interface or connection.
+
+Images will be needed across the product list and detail page, but will need to support different resolutions.
+
+### Build an Image Wrapping component
+- Use the Image service of nextJS
+- Support adjustable widths and heights
+- Supports adjusting the quality
+- Supports optional styling options such as objectPosition & objectFit changes
+
+### Component Template
+You can use this template to help get you started
+
+```
+import Image from 'next/image'
+import styled from 'styled-components'
+
+const ImageWrapper = styled.div``
+
+const ImageElement = () => {
+    return <> </>
+}
+```
+
+### Storybook Template
+
+```
+export default {
+    title: 'Workshop/session1/playground/ImageElement',
+    component: ImageElement,
+    args: {
+        width: '',
+        height: '',
+    },
+};
+
+export const ImageElementStory = {};
+```
