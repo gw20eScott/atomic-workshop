@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React atomic design workshop
+The workshop will be done live in person, this repo serves as some code-along and excerise material.
 
-## Getting Started
+## verifying you're ready for the workshop
+The workshop consists of 3 tools which require:
 
-First, run the development server:
+- NodeJs V18 or NodeJS V20
+- NPM
+- Storybook
+- Cypress
+- NextJS
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Node version v20.12.2 was used to build the workshop material and confirmed to be working as intended.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install Dependencies
+`npm i` or `yarn` to install all the dependencies for this repo / workshop.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Storybook
+To confirm storybook is working, you can use `npm run storybook`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### NextJS
+To confirm storybook is working, you can use `npm run dev`
 
-## Learn More
+### Cypress
+To confirm storybook is working, you can use `npm run cypress`
 
-To learn more about Next.js, take a look at the following resources:
+## Warning
+You will need to be running all 3 at the same time during the workshop, so make sure you have 3 terminal tabs / windows open and no conflicting processes running.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### MacOS
+Was used to develop this workshop, if you use Linus or Windows you will need to verify you have configured your workstation accordingly.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Slides
+The presentation can be found here: https://www.figma.com/proto/a6auhK1uD2pDeEwtZBLuHM/Slides?node-id=1-40&t=Z7IR8V0zZB4nHj0C-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**PASSWORD:**
+```goldmund```
