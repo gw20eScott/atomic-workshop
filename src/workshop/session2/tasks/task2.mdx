@@ -1,0 +1,51 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Workshop/session2/tasks/task2-seperate-the-cart" />
+
+### Tasks
+These exercises are designed to help get your hands dirty and familair with Atomic Design practises.
+If you're stuck at any point, feel free to ask for assistance or check the 'awnsers' folder for some clues and insight.
+
+No one will be reviewing your work or checking on it's "correctness", that is for you to determine with how you plan to adopt the practises and the product you're building / maintaining.
+
+# Task 2 - Seperate the Cart from the product list
+We want to move the Cart to the sidebar, which means it needs to become it's own module that can respond to a global state.
+
+### TASK:
+- Make the Cart a seperate module
+- Create a context provider to extend the state across your application
+- Cart should update from product clicks of both features and regular items (together)
+- Cart should support removing items from the list
+
+### Component Template
+You should edit the exisitng module for this exercise, as well as add a new one.
+
+### Storybook Template
+
+```
+const StoryWrapper = (props) => {}
+
+export default {
+  component: StoryWrapper,
+  args: {
+    data: response.data
+  }
+}
+
+export const ProductsModuleStory = {
+  args: {
+    title: 'Products',
+    data: response.data,
+    description: 'The following products are at a discount.'
+  }
+};
+
+export const ComingSoonProductsModuleStory = {
+  args: {
+    title: 'Coming Soon',
+    data: response.data,
+    notForSale: true,
+    description: 'The following products are soon on sale.'
+  }
+};
+```

@@ -1,0 +1,50 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Workshop/session2/tasks/task1-make-product-list-module-generic" />
+
+### Tasks
+These exercises are designed to help get your hands dirty and familair with Atomic Design practises.
+If you're stuck at any point, feel free to ask for assistance or check the 'awnsers' folder for some clues and insight.
+
+No one will be reviewing your work or checking on it's "correctness", that is for you to determine with how you plan to adopt the practises and the product you're building / maintaining.
+
+# Task 1 - Make the product list module generic
+Let's now make our product list module more generic, so we can tie the same module to different entity types.
+
+### Build a page title typography element
+- Add filtering and sorting to the exisitng module
+- Add passing different data and different handlers (clicks)
+- Make an example of the product list module to support featured products and regular products
+
+### Component Template
+You should edit the exisitng module for this exercise.
+
+### Storybook Template
+
+```
+const StoryWrapper = (props) => {}
+
+export default {
+  component: StoryWrapper,
+  args: {
+    data: response.data
+  }
+}
+
+export const ProductsModuleStory = {
+  args: {
+    title: 'Products',
+    data: response.data,
+    description: 'The following products are at a discount.'
+  }
+};
+
+export const ComingSoonProductsModuleStory = {
+  args: {
+    title: 'Coming Soon',
+    data: response.data,
+    notForSale: true,
+    description: 'The following products are soon on sale.'
+  }
+};
+```

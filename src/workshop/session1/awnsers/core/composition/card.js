@@ -23,15 +23,17 @@ const CardImage = styled.div`
     overflow: hidden;
 
     img {
-        object-fit: cover;
-        object-positon: center center;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        object-position: center center;
     }
 `
 
 const CardButton = styled.div``
 
 const Card = ({ children }) => {
-    return <CardWrapper>
+    return <CardWrapper className='product-card-wrapper'>
         {children}
     </CardWrapper>
 }

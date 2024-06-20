@@ -23,9 +23,7 @@ async function getData() {
 
 // export async function generateMetadata() {
 //   // fetch data
-//   const { data } = await getData()
-
-//   const metaData = convertMetaData(data?.head)
+//   const { metaData } = await getData()
 
 //   return {
 //     ...metaData,

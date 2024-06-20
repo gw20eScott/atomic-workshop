@@ -29,7 +29,14 @@ const ProductModule = ({ data }) => {
     const [activeProducts, setActiveProducts] = useState([])
 
     const handleClick = (productName) => {
-        setActiveProducts(productName)
+        let newArray = [...activeProducts]
+
+        if(newArray.indexOf(productName) >= 0) {
+            newArray = newArray.filter(item => item !== productName)
+        } else {
+            newArray.push(productName)
+        }
+        setActiveProducts(newArray)
     }
 
     return <ProductModuleWrapper>
@@ -37,7 +44,7 @@ const ProductModule = ({ data }) => {
             activeProducts && activeProducts.length > 0 && <div className='productListSelected'>
                 <strong> The following products are selected: </strong>
                 {
-                    activeProducts.map(item => <span> {item} </span>)
+                    activeProducts.map(item => <span key={item}> {item} </span>)
                 }
             </div>
         }
@@ -51,6 +58,7 @@ const ProductModule = ({ data }) => {
             {
                 data && data.map(item => <div key={item.productName}>
                     <ProductCard
+                        active={activeProducts.indexOf(item.productName) > -1}
                         data={item}
                         handleClick={() => { handleClick(item.productName) }}
                     />
