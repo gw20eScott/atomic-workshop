@@ -16,13 +16,13 @@ Node version v20.12.2 was used to build the workshop material and confirmed to b
 `npm i` or `yarn` to install all the dependencies for this repo / workshop.
 
 ### Storybook
-To confirm storybook is working, you can use `npm run storybook`
+To confirm Storybook is working, you can use `npm run storybook`
 
 ### NextJS
-To confirm storybook is working, you can use `npm run dev`
+To confirm NextJS is working, you can use `npm run dev`
 
 ### Cypress
-To confirm storybook is working, you can use `npm run cypress`
+To confirm Cypress is working, you can use `npm run cypress`
 
 ## Warning
 You will need to be running all 3 at the same time during the workshop, so make sure you have 3 terminal tabs / windows open and no conflicting processes running.
