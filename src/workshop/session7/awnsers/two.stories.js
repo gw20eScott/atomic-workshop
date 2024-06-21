@@ -1,12 +1,14 @@
 const prefixText = {
   sold: 'is sold',
-  forSale: 'is for sale'
+  forSale: 'is for sale',
 }
 
 const MyComponent = ({ children, type }) => {
-  return <div>
+  return (
+    <div>
       {children} {prefixText[type] || ''}
-  </div>
+    </div>
+  )
 }
 
 // AWNSER:
@@ -20,8 +22,8 @@ export default {
   component: StoryWrapper,
   args: {
     text: 'Hello world',
-    type: 'sold'
-  }
+    type: 'sold',
+  },
 }
 
-export const BasicComponent = {};
+export const BasicComponent = {}

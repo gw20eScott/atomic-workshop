@@ -14,45 +14,46 @@ const primary = `
 const secondary = `color: #000;`
 
 export const PrimaryButton = styled.button`
-    ${base}
-    ${primary}
+  ${base}
+  ${primary}
 `
 
 export const SecondaryButton = styled.button`
-    ${base}
-    ${secondary}
+  ${base}
+  ${secondary}
 `
 
 export const PrimaryLink = styled.a`
-    ${base}
-    ${primary}
+  ${base}
+  ${primary}
 `
 
 export const SecondaryLink = styled.a`
-    ${base}
-    ${secondary}
+  ${base}
+  ${secondary}
 `
 
 const Button = ({
-    variant = 'primary',
-    children,
-    type = 'button',
-    href = '#',
-    handleClick = () => {}
+  variant = 'primary',
+  children,
+  type = 'button',
+  href = '#',
+  handleClick = () => {},
 }) => {
-    const Element = type === 'button'
-        ? variant ==='primary'
-            ? PrimaryButton
-            : SecondaryButton
-        : variant ==='primary'
-            ? PrimaryLink
-            : SecondaryLink
-    
-    if (type === 'button') {
-        return <Element onClick={handleClick}> {children} </Element>
-    }
+  const Element =
+    type === 'button'
+      ? variant === 'primary'
+        ? PrimaryButton
+        : SecondaryButton
+      : variant === 'primary'
+      ? PrimaryLink
+      : SecondaryLink
 
-    return <Element href={href}> {children} </Element>
+  if (type === 'button') {
+    return <Element onClick={handleClick}> {children} </Element>
+  }
+
+  return <Element href={href}> {children} </Element>
 }
 
 export default Button

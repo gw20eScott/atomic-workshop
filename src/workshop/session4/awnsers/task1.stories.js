@@ -10,17 +10,16 @@ const StoryWrapper = (props) => {
     setState((oldstate) => {
       return {
         ...oldstate,
-        [key]: value
+        [key]: value,
       }
     })
   }
 
-  return <div>
-    <FormManager
-      updateState={updateState}
-      schema={props.data}
-      data={state} />
-  </div>
+  return (
+    <div>
+      <FormManager updateState={updateState} schema={props.data} data={state} />
+    </div>
+  )
 }
 
 export default {
@@ -33,15 +32,15 @@ export default {
         key: 'productName',
         validation: {
           length: 5,
-        }
+        },
       },
       {
         name: 'Description',
         type: 'Textarea',
         key: 'productDesc',
         validation: {
-          length: 300
-        }
+          length: 300,
+        },
       },
       {
         name: 'Brand',
@@ -50,16 +49,16 @@ export default {
         options: [
           {
             name: 'Apple',
-            value: 'Apple'
+            value: 'Apple',
           },
           {
             name: 'Google',
-            value: 'Google'
-          }
-        ]
-      }
-    ]
-  }
+            value: 'Google',
+          },
+        ],
+      },
+    ],
+  },
 }
 
-export const ProductManagement = {};
+export const ProductManagement = {}

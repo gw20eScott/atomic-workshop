@@ -1,7 +1,5 @@
 const MyComponent = ({ children }) => {
-    return <div>
-        {children}
-    </div>
+  return <div>{children}</div>
 }
 
 // AWNSER:
@@ -14,8 +12,8 @@ const StoryWrapper = ({ text }) => {
 export default {
   component: StoryWrapper,
   args: {
-    text: 'Hello world'
-  }
+    text: 'Hello world',
+  },
 }
 
-export const BasicComponent = {};
+export const BasicComponent = {}

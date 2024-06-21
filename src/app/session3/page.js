@@ -18,20 +18,20 @@ import response from '@/workshop/_mockdata_/_session3_products'
 // }
 
 async function staticData() {
-    const pageResponse = {
-        data: {
-            title: 'Products',
-            showToggles: true,
-            data: response.data,
-            description: 'The following products are at a discount.'
-        },
-        metaData: {
-            title: 'Homepage product list',
-            description: 'List of decent products for sale'
-        }
-    }
+  const pageResponse = {
+    data: {
+      title: 'Products',
+      showToggles: true,
+      data: response.data,
+      description: 'The following products are at a discount.',
+    },
+    metaData: {
+      title: 'Homepage product list',
+      description: 'List of decent products for sale',
+    },
+  }
 
-    return pageResponse
+  return pageResponse
 }
 
 //
@@ -50,7 +50,7 @@ export async function generateMetadata() {
 }
 
 export default async function Root() {
-  const {data} = await staticData()
+  const { data } = await staticData()
 
   return <HomePage data={data} />
 }

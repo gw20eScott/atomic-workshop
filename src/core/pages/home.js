@@ -5,7 +5,9 @@ import ClientApp from '@/core/app/clientApp'
 import WelcomeComponent from '@/core/components/welcome'
 
 export default function HomePage() {
-  return <ClientApp>
-    <WelcomeComponent />
-  </ClientApp>
+  return (
+    <ClientApp>
+      <WelcomeComponent />
+    </ClientApp>
+  )
 }

@@ -1,31 +1,37 @@
 import response from '@/workshop/_mockdata_/_session1_products'
 import ProductModule from '@/workshop/session2/awnsers/core/module/task3.products'
 import CartModule from '@/workshop/session2/awnsers/core/module/task2.cart'
-import ProductsProvider, { useProductContext } from '@/workshop/session2/awnsers/core/context/products'
+import ProductsProvider, {
+  useProductContext,
+} from '@/workshop/session2/awnsers/core/context/products'
 
 const ProductsWrapper = (props) => {
   const { activeProducts, setSelectedProducts } = useProductContext()
-  return <div>
-    <CartModule activeProducts={activeProducts} />
-    <ProductModule
-      handleClick={setSelectedProducts}
-      activeProducts={activeProducts}
-      {...props}
-    />
-  </div>
+  return (
+    <div>
+      <CartModule activeProducts={activeProducts} />
+      <ProductModule
+        handleClick={setSelectedProducts}
+        activeProducts={activeProducts}
+        {...props}
+      />
+    </div>
+  )
 }
 
 const StoryWrapper = (props) => {
-  return <ProductsProvider>
-    <ProductsWrapper {...props} />
-  </ProductsProvider>
+  return (
+    <ProductsProvider>
+      <ProductsWrapper {...props} />
+    </ProductsProvider>
+  )
 }
 
 export default {
   component: StoryWrapper,
   args: {
-    data: response.data
-  }
+    data: response.data,
+  },
 }
 
 export const ProductsModuleStory = {
@@ -33,9 +39,9 @@ export const ProductsModuleStory = {
     title: 'Products',
     data: response.data,
     description: 'The following products are at a discount.',
-    showToggles: true
-  }
-};
+    showToggles: true,
+  },
+}
 
 export const ComingSoonProductsModuleStory = {
   args: {
@@ -43,6 +49,6 @@ export const ComingSoonProductsModuleStory = {
     data: response.data,
     notForSale: true,
     description: 'The following products are soon on sale.',
-    showToggles: true
-  }
-};
+    showToggles: true,
+  },
+}

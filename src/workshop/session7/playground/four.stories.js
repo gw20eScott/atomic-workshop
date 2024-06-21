@@ -17,11 +17,21 @@ const MyComponent = () => {
     }
   }, [firstName, lastName, error, setError])
 
-  return <div>
-      <input value={firstName} placeholder='First Name' onChange={e => setFirstName(e.target.value)} />
-      <input value={lastName} placeholder='Last Name' onChange={e => setLastName(e.target.value)} />
+  return (
+    <div>
+      <input
+        value={firstName}
+        placeholder="First Name"
+        onChange={(e) => setFirstName(e.target.value)}
+      />
+      <input
+        value={lastName}
+        placeholder="Last Name"
+        onChange={(e) => setLastName(e.target.value)}
+      />
       {error && 'first name and last name both need to be 3 characters or more'}
-  </div>
+    </div>
+  )
 }
 
 // PROBLEM:
@@ -38,7 +48,7 @@ const StoryWrapper = ({ data }) => {
 
 export default {
   component: StoryWrapper,
-  args: {}
+  args: {},
 }
 
-export const BasicComponent = {};
+export const BasicComponent = {}

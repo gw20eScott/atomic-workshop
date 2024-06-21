@@ -7,8 +7,8 @@ const StoryWrapper = ({ data }) => {
 export default {
   component: StoryWrapper,
   args: {
-    data: 'This is a page title'
-  }
+    data: 'This is a page title',
+  },
 }
 
-export const PageTitleStory = {};
+export const PageTitleStory = {}

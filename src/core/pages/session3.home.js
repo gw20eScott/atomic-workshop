@@ -6,14 +6,16 @@ import ProductModule from '@/workshop/session2/awnsers/core/module/task3.product
 import CartModule from '@/workshop/session2/awnsers/core/module/task2.cart'
 
 export default function HomePage({ data }) {
-    const { activeProducts, setSelectedProducts } = useProductContext()
-    return <>
-        <Navigation />
-        <ProductModule
-            {...data}
-            activeProducts={activeProducts}
-            handleClick={setSelectedProducts}
-        />
-        <CartModule activeProducts={activeProducts} />
+  const { activeProducts, setSelectedProducts } = useProductContext()
+  return (
+    <>
+      <Navigation />
+      <ProductModule
+        {...data}
+        activeProducts={activeProducts}
+        handleClick={setSelectedProducts}
+      />
+      <CartModule activeProducts={activeProducts} />
     </>
+  )
 }

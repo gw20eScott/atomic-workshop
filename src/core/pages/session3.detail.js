@@ -15,18 +15,16 @@ const MediaContainer = styled.div`
 
 export default function FeaturedProducts({ data }) {
   console.log('xxxxxx', data)
-  return <ClientApp>
-    <Navigation />
+  return (
+    <ClientApp>
+      <Navigation />
 
-    <PageTitle>
-      {data.item.productName}
-    </PageTitle>
-    <MediaContainer>
-      <Image {...data.item.media} layout='fill' objectFit='contain' />
-    </MediaContainer>
+      <PageTitle>{data.item.productName}</PageTitle>
+      <MediaContainer>
+        <Image {...data.item.media} layout="fill" objectFit="contain" />
+      </MediaContainer>
 
-    <P style={{ whiteSpace: 'pre-wrap' }}>
-      {data.item.productDesc}
-    </P>
-  </ClientApp>
+      <P style={{ whiteSpace: 'pre-wrap' }}>{data.item.productDesc}</P>
+    </ClientApp>
+  )
 }

@@ -17,19 +17,19 @@ import response from '@/workshop/_mockdata_/_session3_products'
 // }
 
 async function staticData(id) {
-    const item = response.data.filter(item => item.id === parseInt(id))[0]
-    const pageResponse = {
-        data: {
-            title: 'Product Detail Page',
-            item,
-        },
-        metaData: {
-            title: `${item.productName} in ${item.productMetaData.color}`,
-            description: ''
-        }
-    }
+  const item = response.data.filter((item) => item.id === parseInt(id))[0]
+  const pageResponse = {
+    data: {
+      title: 'Product Detail Page',
+      item,
+    },
+    metaData: {
+      title: `${item.productName} in ${item.productMetaData.color}`,
+      description: '',
+    },
+  }
 
-    return pageResponse
+  return pageResponse
 }
 
 //
@@ -46,9 +46,9 @@ export async function generateMetadata({ params }) {
     ...metaData,
   }
 }
- 
+
 export default async function Page({ params }) {
-  const {data} = await staticData(params.id)
+  const { data } = await staticData(params.id)
 
   return <DetailPage data={data} />
 }

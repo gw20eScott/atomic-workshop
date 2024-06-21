@@ -3,19 +3,22 @@ const MyComponent = ({ data }) => {
     return {
       id: indx,
       name: `Item ${indx}`,
-      price: `$ ${300 * (indx + 1)}`
+      price: `$ ${300 * (indx + 1)}`,
     }
   })
 
-  return <div>
-      {
-        makeDataDoSomething && makeDataDoSomething.map(item => {
-          return <div>
-            {item.id} - {item.name} - {item.price}
-          </div>
-        })
-      }
-  </div>
+  return (
+    <div>
+      {makeDataDoSomething &&
+        makeDataDoSomething.map((item) => {
+          return (
+            <div>
+              {item.id} - {item.name} - {item.price}
+            </div>
+          )
+        })}
+    </div>
+  )
 }
 
 // PROBLEM:
@@ -35,14 +38,14 @@ const StoryWrapper = ({ data }) => {
 const item = {
   id: null,
   name: null,
-  price: null
+  price: null,
 }
 
 export default {
   component: StoryWrapper,
   args: {
-    data: [item, item, item, item, item, item, item, item]
-  }
+    data: [item, item, item, item, item, item, item, item],
+  },
 }
 
-export const BasicComponent = {};
+export const BasicComponent = {}

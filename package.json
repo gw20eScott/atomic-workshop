@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "prettier": "./node_modules/.bin/prettier --no-config --no-semi --single-quote --write './src/**/*.{js,jsx}'",
+    "eslint": "./node_modules/.bin/eslint ./src/**/*.{js,jsx} --fix",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "cypress": "npx cypress open"
@@ -32,6 +33,20 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "eslint-plugin-storybook": "^0.8.0",
-    "storybook": "^8.0.10"
+    "storybook": "^8.0.10",
+    "husky": "4.3.8",
+    "lint-staged": "11.1.2",
+    "prettier": "2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

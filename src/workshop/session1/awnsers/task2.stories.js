@@ -12,8 +12,8 @@ export default {
     src: media,
     alt: 'Orange Iphone',
     width: 200,
-    variant: 'onlyImage'
-  }
+    variant: 'onlyImage',
+  },
 }
 
-export const ImageElementStory = {};
+export const ImageElementStory = {}

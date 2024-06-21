@@ -6,20 +6,23 @@ const MyComponent = ({ data }) => {
       return {
         id: indx,
         name: `Item ${indx}`,
-        price: `$ ${300 * (indx + 1)}`
+        price: `$ ${300 * (indx + 1)}`,
       }
     })
   }, [data])
 
-  return <div>
-      {
-        makeDataDoSomething && makeDataDoSomething.map(item => {
-          return <div key={item.id}>
-            {item.id} - {item.name} - {item.price}
-          </div>
-        })
-      }
-  </div>
+  return (
+    <div>
+      {makeDataDoSomething &&
+        makeDataDoSomething.map((item) => {
+          return (
+            <div key={item.id}>
+              {item.id} - {item.name} - {item.price}
+            </div>
+          )
+        })}
+    </div>
+  )
 }
 
 // AWNSER:
@@ -33,14 +36,14 @@ const StoryWrapper = ({ data }) => {
 const item = {
   id: null,
   name: null,
-  price: null
+  price: null,
 }
 
 export default {
   component: StoryWrapper,
   args: {
-    data: [item, item, item, item, item, item, item, item]
-  }
+    data: [item, item, item, item, item, item, item, item],
+  },
 }
 
-export const BasicComponent = {};
+export const BasicComponent = {}
