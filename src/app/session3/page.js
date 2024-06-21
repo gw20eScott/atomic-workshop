@@ -21,6 +21,7 @@ async function staticData() {
     const pageResponse = {
         data: {
             title: 'Products',
+            showToggles: true,
             data: response.data,
             description: 'The following products are at a discount.'
         },

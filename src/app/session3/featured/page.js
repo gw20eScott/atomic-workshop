@@ -22,6 +22,7 @@ async function staticData() {
         data: {
             title: 'Featured Products',
             data: response.data,
+            showToggles: true,
             description: 'Check these amazing products'
         },
         metaData: {
