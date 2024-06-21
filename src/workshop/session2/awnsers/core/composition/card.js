@@ -17,47 +17,75 @@ const CardWrapper = styled.div`
         display: block;
         width: 100%;
     }
-`
 
-const CardImage = styled.div`
-    width: 100%;
-    height: 440px;
-    overflow: hidden;
-
-    img {
-        object-fit: contain;
-        height: 100%;
+    .cardImage {
         width: 100%;
-        object-position: center center;
+        height: 440px;
+        overflow: hidden;
+
+        img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+            object-position: center center;
+        }
+    }
+
+    &.card-list {
+        width: 100%;
+        display: block;
+
+        .cardContent,
+        .cardImage {
+            width:calc(100% - 200px);
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .cardImage {
+            width: 200px;
+            height: 140px;
+
+            img {
+                
+            }
+        }
     }
 `
 
+const CardImage = styled.div``
+
 const CardButton = styled.div``
 
-const Card = ({ children }) => {
-    return <CardWrapper>
+const Card = ({ children, variant, key }) => {
+    return <CardWrapper key={key} className={`productCard card-${variant}`}>
         {children}
     </CardWrapper>
 }
 Card.Title = ({ title, id }) => {
-    return <Link href={`/session3/${id}`}>
+    return <Link href={`/session3/${id}`} className='cardTitle'>
         <CardTitle> {title} </CardTitle>
     </Link>
 }
-Card.Media = (media) => {
-    return <CardImage>
-        <MediaElement {...media} variant='onlyImage' />
+Card.Media = (props) => {
+    return <CardImage className='cardImage'>
+        <MediaElement {...props} variant='onlyImage' />
     </CardImage>
 }
 Card.Description = ({ description }) => {
-    return <P> {description} </P>
+    return <P className='cardDesc'> {description} </P>
 }
 Card.Button = ({ handleClick, text }) => {
-    return <CardButton>
+    return <CardButton className='cardButton'>
         <Button handleClick={handleClick} variant='primary'>
             {text}
         </Button>
     </CardButton>
+}
+Card.Content = ({ children }) => {
+    return <div className='cardContent'>
+        {children}
+    </div>
 }
 
 export default Card

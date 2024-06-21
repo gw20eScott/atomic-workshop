@@ -1,0 +1,49 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Workshop/session2/tasks/task3-seperate-the-cart" />
+
+### Tasks
+These exercises are designed to help get your hands dirty and familair with Atomic Design practises.
+If you're stuck at any point, feel free to ask for assistance or check the 'awnsers' folder for some clues and insight.
+
+No one will be reviewing your work or checking on it's "correctness", that is for you to determine with how you plan to adopt the practises and the product you're building / maintaining.
+
+# Task 3 - Product list can be a list or grid view
+We created business logic until this point, now we can begin implementing the presentional logic.
+
+### TASK:
+- Make a list view of the product card (variation)
+- Make a toggle for list or grid view
+
+### Component Template
+You should edit the exisitng module for this exercise, as well as add a new one.
+
+### Storybook Template
+
+```
+const StoryWrapper = (props) => {}
+
+export default {
+  component: StoryWrapper,
+  args: {
+    data: response.data
+  }
+}
+
+export const ProductsModuleStory = {
+  args: {
+    title: 'Products',
+    data: response.data,
+    description: 'The following products are at a discount.'
+  }
+};
+
+export const ComingSoonProductsModuleStory = {
+  args: {
+    title: 'Coming Soon',
+    data: response.data,
+    notForSale: true,
+    description: 'The following products are soon on sale.'
+  }
+};
+```

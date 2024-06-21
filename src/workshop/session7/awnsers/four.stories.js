@@ -62,7 +62,7 @@ const MyComponent = () => {
 //
 // - No need to useEffect, you can intead memo the check
 // - Single state object
-// - Field changes can be done in the data and don't affect the DOM / Visual components
+// - Field changes can be done in the data so you do not need to manually construct the DOM
 const StoryWrapper = ({ data }) => {
   return <MyComponent data={data} />
 }
