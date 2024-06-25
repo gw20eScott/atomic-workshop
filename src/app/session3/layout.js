@@ -1,6 +1,6 @@
 'use client'
 import Container from '@/core/components/session3.wrapper'
-import ProductsProvider from '@/workshop/session2/awnsers/core/context/products'
+import ProductsProvider from '@/workshop/session2/awsners/core/context/products'
 
 const Session3Layout = ({ children }) => {
   return (

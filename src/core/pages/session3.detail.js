@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import ClientApp from '@/core/app/clientApp'
 import Navigation from '@/core/modules/navigation'
-import { PageTitle, P } from '@/workshop/session2/awnsers/core/elements/typo'
+import { PageTitle, P } from '@/workshop/session2/awsners/core/elements/typo'
 
 import styled from 'styled-components'
 
@@ -14,7 +14,6 @@ const MediaContainer = styled.div`
 `
 
 export default function FeaturedProducts({ data }) {
-  console.log('xxxxxx', data)
   return (
     <ClientApp>
       <Navigation />
