@@ -33,12 +33,12 @@ const ProductModule = () => {
 ### Storybook Template
 
 ```
+import response from '@/workshop/_mockdata_/_session1_products'
 export default {
     title: 'Workshop/session1/playground/ProductModule',
     component: ProductModule,
     args: {
-        width: '',
-        height: '',
+        data: response.data
     },
 };
 

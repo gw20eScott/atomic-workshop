@@ -1,0 +1,45 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Workshop/session1/tasks/task5-build-product-section" />
+
+### Tasks
+These exercises are designed to help get your hands dirty and familair with Atomic Design practises.
+If you're stuck at any point, feel free to ask for assistance or check the 'awnsers' folder for some clues and insight.
+
+No one will be reviewing your work or checking on it's "correctness", that is for you to determine with how you plan to adopt the practises and the product you're building / maintaining.
+
+# Task 5 - Build a Product list section
+We have the module, that accepts data from an external source.
+We'll need create a layer that taps into some presential logic (width) and passes the data down from the page.
+
+### Build an Product list module
+- Build a section for the product list
+- Use the product module
+- Add a 'more products' list
+- Add a page title ontop of the section
+- Add a pageWidth wrapper
+
+### Component Template
+You can use this template to help get you started
+
+```
+import styled from 'styled-components'
+
+const ProductSectionWrapper = styled.div``
+
+const ProductSection = () => {
+    return <> </>
+}
+```
+
+### Storybook Template
+
+```
+export default {
+    title: 'Workshop/session1/playground/ProductSection',
+    component: ProductSection,
+    args: {},
+};
+
+export const ProductSectionStory = {};
+```
