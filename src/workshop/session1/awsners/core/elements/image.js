@@ -34,8 +34,8 @@ const ImageWrapper = ({
         src={src}
         quality={quality || 75}
         alt={alt || ''}
-        width={!useWrapper ? width : '100%'}
-        height={!useWrapper ? height : '100%'}
+        width={!useWrapper ? width || 100 : 100}
+        height={!useWrapper ? height|| 100 : 100}
       />
     )
   }, [src, width, alt, height, quality, useWrapper])
